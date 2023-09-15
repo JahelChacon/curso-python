@@ -3,6 +3,8 @@ print(text[0], text[5])
 
 print("*"*30)
 
+# Indexing
+
 # Ultimo caracter
 print(text[len(text) -1])
 print(text[-1]) # Decirle el ultimo
