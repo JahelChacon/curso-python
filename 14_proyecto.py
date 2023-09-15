@@ -1,13 +1,13 @@
 import random
 
-user_option = input("Elige piedra, papel o tijera -> ")
-option = random.randrange(1,4)
-if option == 1:
-    cpu_option = 'piedra'
-elif option == 2: 
-    cpu_option = 'papel'
-else:
-    cpu_option = 'tijera'
+tuplaOpciones = ('piedra', 'papel', 'tijera') # Tupla de opciones
+
+user_option = input("Elige piedra, papel o tijera -> ") # El usuario digita
+while not user_option in tuplaOpciones:
+    print("Opcion no valida, eliga una valida")
+    user_option = input("Elige piedra, papel o tijera -> ")
+## option = random.randrange(1,4) # Otra forma de random
+cpu_option = random.choice(tuplaOpciones)
 
 print(f"Usuario -> {user_option} / CPU -> {cpu_option}")
 
